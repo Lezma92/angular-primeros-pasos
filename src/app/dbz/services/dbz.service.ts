@@ -19,7 +19,7 @@ export class DbzService {
     },
     {
       idPersonaje: uuid(),
-      name: 'Goguetta',
+      name: 'Bulma',
       power: 45200,
     },
     {
