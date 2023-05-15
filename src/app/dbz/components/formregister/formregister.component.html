@@ -1,0 +1,19 @@
+<h5>Agregar personajes</h5>
+<form action="" (ngSubmit)="agregarPersonaje()">
+  <input
+    type="text"
+    [(ngModel)]="datos.name"
+    name="name"
+    placeholder="Nombre"
+    class="form-control mb-2"
+  />
+  <input
+    type="text"
+    [(ngModel)]="datos.power"
+    name="power"
+    placeholder="Poder"
+    class="form-control mb-2"
+  />
+  <button class="btn btn-primary" type="submit">Guardar</button>
+  <pre>{{datos | json}}</pre>
+</form>

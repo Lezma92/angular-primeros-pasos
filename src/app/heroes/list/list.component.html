@@ -1,0 +1,69 @@
+<h1>Lista de Heroes</h1>
+
+<div class="card container-flui">
+    <div class="card-body">
+        <div *ngIf="heroeDelete; else sinEliminar">
+            <p>Heroe Eliminado: <small class="text-danger">{{heroeDelete}}</small></p>
+        </div>
+
+
+        <ng-template #sinEliminar>
+            <h1 class="text-primary">No se ha eliminado ningun heroe!</h1>
+        </ng-template>
+ 
+       <div class="btn-group">
+        <button class="btn btn-outline-danger" (click)="eliminarHeroe()"> Eliminar Heroe</button>
+        <button class="btn btn-outline-danger" (click)="eliminarComida()"> Eliminar Platillo</button>
+       </div>
+    </div>
+</div>
+<div class="row  container-flui">
+
+    <div class="card border-warning col-sm-2 mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Warning card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+   
+    <div class="card col-sm-2 m-1">
+        <div class="card-header">
+            Lista heroes
+        </div>
+        <div class="card-body">
+            <ul class="mt-1 list-group">
+                <li *ngFor="let heroeNme of nombresHeroes" class="list-group-item">{{heroeNme}}</li>
+            </ul>
+            
+        </div>
+    </div>
+    
+    
+    <div class="card col-sm-2 m-1">
+        <div class="card-header">
+            Lista de comidas
+        </div>
+        <div class="card-body">
+            <ul class="mt-1 list-group">
+                <li *ngFor="let platos of platillos" class="list-group-item">{{platos}}</li>
+            </ul>
+            
+        </div>
+    </div>
+    
+    <div class="card col-sm-2 m-1">
+        <div class="card-header">
+            Lista de animales
+        </div>
+        <div class="card-body">
+            <ul class="mt-1 list-group">
+                <li *ngFor="let animal of listaAnimales" class="list-group-item">{{animal}}</li>
+            </ul>
+            
+        </div>
+    </div>
+
+  
+</div>
+

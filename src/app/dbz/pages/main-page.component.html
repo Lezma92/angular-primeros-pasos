@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="col">
+    <app-dbz-list [characterList]="listaPersonajesService" (emitirEliminado)="eliminarPersonaje($event)"></app-dbz-list>
+    </div>
+    <div class="col">
+        <app-dbz-formregister (emitiPersonaje)="onPersonaje($event)"></app-dbz-formregister>
+    </div>
+</div>
